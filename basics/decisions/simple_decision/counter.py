@@ -26,4 +26,3 @@ else:
     odd_count += 1
 
 print(f"The program has been completed.There are {even_count} even numbers found and {odd_count} odd numbers found")
-
