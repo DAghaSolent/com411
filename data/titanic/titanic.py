@@ -67,8 +67,8 @@ def display_passengers_per_age_group():
     elderly = 0
 
     for passenger in records:
-        age = passenger[5]
-        if age != (""):
+        if passenger[5] != (""):
+            age = float(passenger[5])
             if age < 18:
                 children += 1
             elif age < 65:
@@ -76,7 +76,7 @@ def display_passengers_per_age_group():
             else:
                 elderly += 1
 
-    print(f"Children: {children}, Adults: {adults}, Elderly:{elderly}")
+    print(f"Children: {children}, Adults: {adults}, Elderly: {elderly}")
 
 
 def run():
