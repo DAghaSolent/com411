@@ -25,6 +25,8 @@ def display_menu():
 
     if display_input == 1:
         display_passenger_names()
+    elif display_input == 2:
+        display_num_survivors()
     else:
         print("Error! Option not recognised!")
 
@@ -35,6 +37,14 @@ def display_passenger_names():
     for passenger in records:
         passenger_name = passenger[3]
         print(passenger_name)
+
+def display_num_survivors():
+    num_survived = 0
+    for passenger in records:
+        survival_status = int(passenger[1])
+        if survival_status == 1:
+            num_survived += 1
+    print(f"{num_survived} passengers survived")
 
 def run():
     load_data("titanic.csv")
