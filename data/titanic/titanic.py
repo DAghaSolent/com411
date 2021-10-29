@@ -4,7 +4,7 @@ records = []
 headings = []
 
 def load_data(file_path):
-    print("Loading data...")
+    print("Loading data...", end="")
 
     with open(file_path) as csv_file:
         csv_reader = csv.reader(csv_file)
@@ -18,15 +18,17 @@ def display_menu():
     print("[1] Display the names of all passengers")
     print("[2] Display the number of passengers that survived")
     print("[3] Display the number of passengers per age group")
+    print("[4] Display the number of passengers per age group")
 
-    diplay_input = int(input())
-    if display_input == 1:
-
-
+    display_input = int(input())
+    print(f"You have selected option: {display_input}")
+    return display_input
 
 def run():
     load_data("titanic.csv")
     print(f"Successfully loaded {len(records)} records.")
+    print()
+    display_menu()
 
 if __name__ == "__main__":
     run()
