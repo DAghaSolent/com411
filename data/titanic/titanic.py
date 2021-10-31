@@ -19,6 +19,7 @@ def display_menu():
     print("[2] Display the number of passengers that survived")
     print("[3] Display the number of passengers per age group")
     print("[4] Display the number of passengers per age group")
+    print("[5] Display the number of survivors per age group")
 
     display_input = int(input())
     print(f"You have selected option: {display_input}")
@@ -31,6 +32,8 @@ def display_menu():
         display_passengers_per_gender()
     elif display_input == 4:
         display_passengers_per_age_group()
+    elif display_input == 5:
+        display_survivors_per_age_group()
     else:
         print("Error! Option not recognised!")
 
@@ -78,6 +81,39 @@ def display_passengers_per_age_group():
 
     print(f"Children: {children}, Adults: {adults}, Elderly: {elderly}")
 
+def display_survivors_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
+    children_survived = 0
+    adults_survived = 0
+    elderly_survived = 0
+
+    for passenger in records:
+        if (passenger[5] != ("")) and (passenger[1] != ("")):
+            age = float(passenger[5])
+            survivor = float(passenger[1])
+            if age < 18:
+                if survivor == 1:
+                    children_survived += 1
+                    children += 1
+                else:
+                    children += 1
+            elif age < 65:
+                if survivor == 1:
+                    adults_survived += 1
+                    adults += 1
+                else:
+                    adults += 1
+            else:
+                if survivor == 1:
+                    elderly_survived += 1
+                    elderly += 1
+                else:
+                    elderly += 1
+
+    print(f"Children: {children_survived}/{children}, Adults: {adults_survived}/{adults}, Elderly: {elderly_survived}/"
+          f"{elderly}")
 
 def run():
     load_data("titanic.csv")
