@@ -3,7 +3,7 @@ import process
 import tui
 
 def read_data(file_path):
-    tui.started(f"Reading data from{file_path}")
+    tui.started(f"Reading data from: {file_path}")
     data = []
     with open(file_path) as csv_file:
         csv_reader = csv.reader(csv_file)
