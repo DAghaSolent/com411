@@ -30,7 +30,6 @@ def survived_vs_sex():
                 sex['female'] += 1
     return sex
 
-
 def run():
     data = read_data()
     fig, axes = plt.subplots(2, 2)
