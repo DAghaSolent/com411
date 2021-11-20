@@ -2,6 +2,7 @@ import csv
 import matplotlib.pyplot as plt
 from matplotlib.ticker import MultipleLocator
 
+
 def read_data(file_path):
     print("Loading Data....", end="")
     temps = {}
@@ -16,6 +17,7 @@ def read_data(file_path):
             temps['week2'].append(float(line[1].strip()))
     return temps
 
+
 def run():
     data = read_data('temps2.csv')
     fig, axes = plt.subplots(1, 2)
@@ -26,6 +28,7 @@ def run():
     axes[1].xaxis.set_major_locator(MultipleLocator(1))
     plt.tight_layout()
     plt.show()
+
 
 if __name__ == "__main__":
     run()

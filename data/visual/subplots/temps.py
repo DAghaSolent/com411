@@ -4,8 +4,9 @@ import csv
 
 temperatures = []
 day = []
-def read_data(file_path):
 
+
+def read_data(file_path):
     print("Loading Data....", end="")
 
     with open(file_path) as csv_file:
@@ -16,6 +17,7 @@ def read_data(file_path):
             day.append(int(line[1].strip()))
 
     return temperatures
+
 
 def run():
     data = read_data('temps.csv')
@@ -28,6 +30,7 @@ def run():
     axes[1].xaxis.set_major_locator(MultipleLocator(1))
     plt.tight_layout()
     plt.show()
+
 
 if __name__ == "__main__":
     run()
