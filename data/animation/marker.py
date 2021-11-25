@@ -5,8 +5,8 @@ def animate(frame):
     global ax
     x = [1, 2, 3, 4, 5]
     y = [2, 4, 6, 8, 10]
-    ax.set_xlim(0, 11)
-    ax.set_ylim(0, 11)
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
     ax.plot(frame, frame, "ro")
 
 
