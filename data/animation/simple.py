@@ -2,7 +2,9 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 def animate(frame):
-    print(f"Frame:{frame}")
+    x = [1, 2, 3, 4, 5]
+    y = [2, 4, 6, 8, 10]
+    ax.plot(x, y)
 
 fig, ax = plt.subplots()
 
