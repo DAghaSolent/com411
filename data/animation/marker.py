@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+
 def animate(frame):
     global ax
     x = [1, 2, 3, 4, 5]
@@ -12,10 +13,12 @@ def animate(frame):
 
 fig, ax = plt.subplots()
 
+
 def run():
     global fig
     some_animation = animation.FuncAnimation(fig, animate, frames=10, interval=1000, repeat=False)
     plt.show()
+
 
 if __name__ == "__main__":
     run()
