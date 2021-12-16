@@ -42,5 +42,6 @@ if(__name__ == "__main__"):
     print(danny.energy)
     print()
     print(danny.eat(20))
-    print(danny.energy)
+    print()
+    danny.display()
 
